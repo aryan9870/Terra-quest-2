@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="cources.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +19,7 @@
 
 <body class="">
     <div class="main">
-        <div class="nav h-20 flex justify-between lg:px-20 shadow-sm fixed bg-white top-0 w-full">
+        <div class="nav h-20 flex justify-between lg:px-20 shadow-sm fixed bg-white top-0 w-full z-10">
             <div class="logo flex justify-center items-center">
                 <img class="h-16" src="/accets/logo-latest.png" alt="">
             </div>
@@ -86,89 +86,7 @@
             </div>
         </div>
 
-        <!-- tabs -->
-        <div class="sm:px-10 px-5 my-20">
-            <div class="container py-10 sm:px-10 px-2 shadow-2xl rounded-2xl">
-                <div
-                    class="tab_box w-full flex justify-around items-center border-b-2 border-[rgba(229,229,229,0.7)] relative">
-                    <button class="tab_btn text-lg text-[#919191] py-5 px-2 cursor-pointer active">Prelims</button>
-                    <button class="tab_btn text-lg text-[#919191] py-5 px-2 cursor-pointer">Mains</button>
-                    <button class="tab_btn text-lg text-[#919191] py-5 px-2 cursor-pointer">Interview</button>
-                    <div class="line absolute bg-[#5834eb] rounded-xl h-1 top-[66px]"></div>
-                </div>
-                <div class="content_box p-5">
-                    <div class="content">
-                        <div>
-                            <h2 class="mb-3 text-2xl">Notes & Mock Tests</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident.</p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Recommended Books</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident placeat pariatur laborum deleniti molestias inventore
-                                officia culpa vel, </p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Video Resources</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae .</p>
-                        </div>
-                    </div>
-
-                    <div class="content hidden">
-                        <div>
-                            <h2 class="mb-3 text-2xl">Notes & Mock Tests</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provide.</p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Recommended Books</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident placeat pariatur laborum deleniti molestias inventore
-                                officia culpa vel, incidunt temporibus .</p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Video Resources</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur</p>
-                        </div>
-                    </div>
-
-                    <div class="content hidden">
-                        <div>
-                            <h2 class="mb-3 text-2xl">Notes & Mock Tests</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident placeat pariatur laborum deleniti molestias inventore
-                                officia culpa vel, incidunt.</p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Recommended Books</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident .</p>
-                        </div>
-
-                        <div>
-                            <h2 class="mb-3 text-2xl">Video Resources</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni expedita quod
-                                necessitatibus mollitia consectetur. Vero non quasi deserunt laudantium placeat soluta.
-                                Earum dolorem molestiae provident placeat .</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="mt-20 flex flex-col xl:px-20 md:px-10 px-5">
             <h1 class="text-3xl font-semibold text-center md:text-start">All Cources</h1>
@@ -259,9 +177,9 @@
                 </div>
             </div>
         </div>
-        <div class="mb-20 flex flex-col xl:px-20 md:px-10 px-5">
+        <div class=" flex flex-col xl:px-20 md:px-10 px-5">
             <h1 class="text-3xl font-semibold text-center md:text-start">New Cources</h1>
-            <div class="cources flex flex-wrap gap-10 justify-around mt-10 mb-10">
+            <div class="cources flex flex-wrap gap-10 justify-around mt-10 mb-20">
                 <div class="w-80 max-w-[80%] bg-white border border-gray-200 rounded-lg shadow-sm ">
                     <img class="p-5 h-60 w-full"
                         src="https://courses-assets-v2.classplus.co/_next/image?url=/api/proxyimage?url=https%3A%2F%2Fcdn-wl-assets.classplus.co%2Fproduction%2Fsingle%2Fklzujf%2Fbaae7126-7a31-4b4e-a97e-533b266bd24c.jpg&w=640&q=75"
@@ -306,10 +224,6 @@
                 </div>
             </div>
         </div>
-
-        
-
-
         <footer class="md:px-0 px-10">
             <div class="flex lg:flex-row flex-col justify-around tracking-wider gap-10 lg:gap-0">
                 <div class="flex flex-col gap-5">

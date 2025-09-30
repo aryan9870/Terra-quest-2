@@ -33,21 +33,40 @@ window.addEventListener("scroll", () => {
     console.log(window.scrollY);
 });
 
-// tabs
+// tabs 1
 
-const tabs = document.querySelectorAll(".tab_btn");
-const all_content = document.querySelectorAll(".content");
+const tabs_1 = document.querySelectorAll(".tab_btn_1");
+const all_content_1 = document.querySelectorAll(".content_1");
 
 
-tabs.forEach((tab, index) => {
+tabs_1.forEach((tab, index) => {
     tab.addEventListener("click", (e) => {
-        tabs.forEach(tab => {tab.classList.remove("active")});
+        tabs_1.forEach(tab => {tab.classList.remove("active")});
         tab.classList.add("active");
-        const line = document.querySelector(".line");
-        line.style.width = e.target.offsetWidth + "px";
-        line.style.left = e.target.offsetLeft + "px";
+        const line_1 = document.querySelector(".line_1");
+        line_1.style.width = e.target.offsetWidth + "px";
+        line_1.style.left = e.target.offsetLeft + "px";
 
-        all_content.forEach(content => {content.classList.add("hidden")});
-        all_content[index].classList.remove("hidden");
+        all_content_1.forEach(content => {content.classList.add("hidden")});
+        all_content_1[index].classList.remove("hidden");
+    })
+})
+
+// tabs 1
+
+const tabs_2 = document.querySelectorAll(".tab_btn_2");
+const all_content_2 = document.querySelectorAll(".content_2");
+
+
+tabs_2.forEach((tab, index) => {
+    tab.addEventListener("click", (e) => {
+        tabs_2.forEach(tab => {tab.classList.remove("active")});
+        tab.classList.add("active");
+        const line_2 = document.querySelector(".line_2");
+        line_2.style.width = e.target.offsetWidth + "px";
+        line_2.style.left = e.target.offsetLeft + "px";
+
+        all_content_2.forEach(content => {content.classList.add("hidden")});
+        all_content_2[index].classList.remove("hidden");
     })
 })

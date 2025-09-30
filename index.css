@@ -17,7 +17,11 @@
     color: #5834eb;
 }
 
-.content {
+.content_1 {
+    animation: moving .5s ease;
+}
+
+.content_2 {
     animation: moving .5s ease;
 }
 

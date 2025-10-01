@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terra Quest</title>
+  <link rel="shortcut icon" href="/accets/logo-latest.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-900">
+  <body class="h-full">
+  ```
+-->
+  <div class="nav h-20 flex justify-between lg:px-20 px-5 shadow-sm fixed bg-white top-0 w-full z-10">
+    <div class="logo flex justify-center items-center">
+      <img class="h-16" src="/accets/logo-latest.png" alt="">
+    </div>
+    <div class="nav-links xl:flex hidden">
+      <ul class="flex text-md font-semibold items-center h-full gap-5 tracking-tight">
+        <li class="bg-[#5834eb] text-white px-5 py-2 rounded-sm opacity-80"><a href="/courses.html">New Cources</a>
+        </li>
+        <li class="relative">
+          <a id="cources-navLink" href="/courses.html">Courses <i class="fa-solid fa-chevron-down text-xs"></i></a>
+          <div id="cources-hemburger" class="absolute w-80 bg-white top-10 -right-10 shadow-2 hidden">
+            <ul class="flex flex-col font-semibold h-full gap-2 justify-center text-sm px-5 xl:tracking-tight">
+              <li class=""><a href="">Current Mania - 3000 MCQS</a></li>
+              <li id="cources-navLink" class=""><a href="">Mission Ayut [10000 MCQS] Challenge</a></li>
+              <li id="cources-navLink" class=""><a href="">UPPCS 2025 Revision & Pyq ONE LINER</a></li>
+              <li id="cources-navLink" class=""><a href="">Current Affairs - jan 2025 to Aug 2025</a></li>
+              <li class=""><a href="">CURRENT MANIA - 3000 MCQS</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class=""><a href="">Our Results</a></li>
+        <li class=""><a href="/artical.html">Daily Artical</a></li>
+        <li class=""><a href="/login.html">Log in</a></li>
+        <li class="border-2 border-[#5834eb] text-[#5834eb] rounded-sm px-3 py-1 w-fit"><a href="/login.html">Sign
+            Up</a></li>
+      </ul>
+    </div>
+    <div id="hemburger-menu" class="xl:hidden flex text-4xl font-semibold items-center">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div id="hemburger-nav-links" class="boder fixed bg-white py-10 w-full px-10 right-0 top-0 hidden">
+      <div id="hemburger-close-btn" class="close-icon flex text-4xl font-semibold items-center top-6 right-5 absolute">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <ul class="flex flex-col text-md font-semibold justify-center h-full gap-2 items-center xl:tracking-tight">
+        <li class=""><a href="/courses.html">New Cources</a></li>
+        <li id="" class="">
+          <a href="/courses.html">Courses</a>
+        </li>
+        <li class=""><a href="">Our Results</a></li>
+        <li class=""><a href="/artical.html">Daily Artical</a></li>
+        <li class=""><a href="/login.html">Log in</a></li>
+        <li class=""><a href="/login.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 mt-20">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img src="/accets/logo-latest.png" alt="Your Company" class="mx-auto h-20 w-auto" />
+      <h2 class="mt-5 text-center text-2xl/9 font-bold tracking-tight">Log in to your account</h2>
+    </div>
+
+    <div class="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="email" class="block text-sm/6 font-medium">Email address</label>
+          <div class="mt-2">
+            <input id="email" type="email" name="email" required autocomplete="email"
+              class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#5834eb] sm:text-sm/6" />
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <label for="password" class="block text-sm/6 font-medium">Password</label>
+            <div class="text-sm">
+              <a href="#" class="font-semibold text-[#5834eb] hover:text-indigo-300">Forgot password?</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input id="password" type="password" name="password" required autocomplete="current-password"
+              class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#5834eb] sm:text-sm/6" />
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="flex w-full justify-center rounded-md bg-[#5834eb] px-3 py-1.5 text-sm/6 font-semibold  hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5834eb] text-white">Log
+            in</button>
+        </div>
+      </form>
+
+      <p class="mt-10 text-center text-sm/6">
+        Not a member?
+        <a href="#" class="font-semibold text-[#5834eb] hover:text-indigo-300">Create a new account</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

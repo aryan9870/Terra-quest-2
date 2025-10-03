@@ -85,16 +85,15 @@
     </div>
 
    <div class="w-full px-5 sm:px-10">
-  <!-- ===== MAIN TABS (UPSC vs UPPCS) ===== -->
- <!-- ===== MAIN TABS ===== -->
-  <div class="flex w-full mb-6 rounded-lg overflow-hidden shadow-lg">
-    <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-[#5834eb] text-white">
-      UPSC
-    </div>
-    <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-gray-200 text-gray-700 hover:bg-gray-300">
-      UPPCS
-    </div>
+  <!-- ===== MAIN TABS ===== -->
+<div class="flex w-full mb-6 rounded-lg overflow-hidden shadow-lg">
+  <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-[#5834eb] text-white">
+    UPSC
   </div>
+  <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-gray-200 text-gray-700 hover:bg-gray-300">
+    UPPCS
+  </div>
+</div>
 
 
   <!-- ===== UPSC CONTENT ===== -->
@@ -348,15 +347,20 @@ document.addEventListener("DOMContentLoaded", () => {
   mainTabs.forEach((tab, i) => {
     tab.addEventListener("click", () => {
       mainTabs.forEach(t => {
-        t.classList.remove("bg-[#5834eb]", "text-white", "shadow-lg");
+        t.classList.remove("bg-[#5834eb]", "text-white");
         t.classList.add("bg-gray-200", "text-gray-700");
       });
-      mainContents.forEach(c => c.classList.add("hidden"));
-
-      tab.classList.add("bg-[#5834eb]", "text-white", "shadow-lg");
+      tab.classList.add("bg-[#5834eb]", "text-white");
       tab.classList.remove("bg-gray-200", "text-gray-700");
 
-      mainContents[i].classList.remove("hidden");
+      // Show content
+      if (i === 0) {
+        upsContent.classList.remove("hidden");
+        uppcsContent.classList.add("hidden");
+      } else {
+        upsContent.classList.add("hidden");
+        uppcsContent.classList.remove("hidden");
+      }
     });
   });
 

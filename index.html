@@ -333,6 +333,62 @@
       </div>
     </footer>
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  // ===== MAIN TABS (UPSC / UPPCS) =====
+  const mainTabs = document.querySelectorAll(".tab_btn_main");
+  const mainContents = document.querySelectorAll(".content_main");
+  const lineMain = document.querySelector(".line_main");
+
+  mainTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      // Reset active state
+      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600"));
+      mainContents.forEach(c => c.classList.add("hidden"));
+
+      // Activate clicked tab
+      tab.classList.add("active", "text-indigo-600");
+      mainContents[index].classList.remove("hidden");
+
+      // Move line under active tab
+      lineMain.style.width = tab.offsetWidth + "px";
+      lineMain.style.left = tab.offsetLeft + "px";
+    });
+  });
+
+  // Initialize main line
+  if (mainTabs.length > 0) {
+    lineMain.style.width = mainTabs[0].offsetWidth + "px";
+    lineMain.style.left = mainTabs[0].offsetLeft + "px";
+  }
+
+  // ===== NESTED TABS (Prelims / Mains / Interview) =====
+  function initNestedTabs(wrapper) {
+    const tabs = wrapper.querySelectorAll(".tab_btn");
+    const contents = wrapper.parentElement.querySelectorAll(".content");
+    const line = wrapper.querySelector(".line");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        // Reset
+        tabs.forEach(t => t.classList.remove("active", "text-indigo-600"));
+        contents.forEach(c => c.classList.add("hidden"));
+
+        // Activate
+        tab.classList.add("active", "text-indigo-600");
+        contents[index].classList.remove("hidden");
+
+        // Move line
+        line.style.width = tab.offsetWidth + "px";
+        line.style.left = tab.offsetLeft + "px";
+      });
+    });
+
+    // Init line
+    if (tabs.length > 0) {
+      line.style.width = tabs[0].offsetWidth + "px";
+      line.style.left = ta
+
   <script src="home.js"></script>
 </body>
 

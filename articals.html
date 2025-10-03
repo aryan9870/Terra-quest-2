@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terra Quest</title>
+    <link rel="shortcut icon" href="/accets/logo-latest.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav h-20 flex justify-between lg:px-20 px-5 shadow-sm fixed bg-white top-0 w-full z-10">
+            <div class="logo flex justify-center items-center">
+                <img class="h-16" src="/accets/logo-latest.png" alt="">
+            </div>
+            <div class="nav-links xl:flex hidden">
+                <ul class="flex text-md font-semibold items-center h-full gap-5 tracking-tight">
+                    <li class="bg-[#5834eb] text-white px-5 py-2 rounded-sm opacity-80"><a href="/courses.html">New
+                            Cources</a>
+                    </li>
+                    <li class=""><a href="/index.html">Home</a></li>
+                    <li class="relative">
+                        <a id="cources-navLink" href="/courses.html">Courses <i
+                                class="fa-solid fa-chevron-down text-xs"></i></a>
+                        <div id="cources-hemburger" class="absolute w-80 bg-white top-10 -right-10 shadow-2 hidden">
+                            <ul
+                                class="flex flex-col font-semibold h-full gap-2 justify-center text-sm px-5 xl:tracking-tight">
+                                <li class=""><a href="">Current Mania - 3000 MCQS</a></li>
+                                <li id="cources-navLink" class=""><a href="">Mission Ayut [10000 MCQS] Challenge</a>
+                                </li>
+                                <li id="cources-navLink" class=""><a href="">UPPCS 2025 Revision & Pyq ONE LINER</a>
+                                </li>
+                                <li id="cources-navLink" class=""><a href="">Current Affairs - jan 2025 to Aug 2025</a>
+                                </li>
+                                <li class=""><a href="">CURRENT MANIA - 3000 MCQS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class=""><a href="/articals.html">Daily Artical</a></li>
+                    <li class=""><a href="/login.html">Log in</a></li>
+                    <li class="border-2 border-[#5834eb] text-[#5834eb] rounded-sm px-5 py-1 w-fit"><a
+                            href="/login.html">Sign
+                            Up</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="hemburger-menu" class="xl:hidden flex text-4xl font-semibold items-center">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div id="hemburger-nav-links" class="boder fixed bg-white py-10 w-full px-10 right-0 top-0 hidden">
+                <div id="hemburger-close-btn"
+                    class="close-icon flex text-4xl font-semibold items-center top-6 right-5 absolute">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul
+                    class="flex flex-col text-md font-semibold justify-center h-full gap-2 items-center xl:tracking-tight">
+                    <li class=""><a href="/courses.html">New Cources</a></li>
+                    <li class=""><a href="/index.html">Home</a></li>
+                    <li id="" class="">
+                        <a href="/courses.html">Courses</a>
+                    </li>
+                    <li class=""><a href="/articals.html">Daily Artical</a></li>
+                    <li class=""><a href="/login.html">Log in</a></li>
+                    <li class=""><a href="/login.html">Sign Up</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="artical-container mt-28 flex flex-col lg:px-10 px-5 gap-5 my-20">
+            <h1 class="text-3xl font-semibold text-center md:text-start">All Articals</h1>
+            <div class="flex gap-10 flex-wrap justify-around">
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around gap-10">
+                    <div class="w-72 p-5 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                        <a href="/artical.html">
+                            <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-5 font-normal text-gray-700 dark:text-gray-400 text-sm">Here are the biggest
+                            enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="text-sm inline-flex items-center px-5 py-2 font-medium text-center text-white bg-[#5834eb] rounded-lg hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg class="rtl:rotate-180 w-5.5 h-5.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="md:px-0 px-5">
+            <div class="flex lg:flex-row flex-col justify-around tracking-wider gap-10 lg:gap-0">
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <img class="h-16" src="/accets/logo-latest.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-[#5834eb]">
+                            Where education meets <br> real-world needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5 text-[#5834eb]">
+                    <div>
+                        <p class="text-xl font-bold">HELPFUL LINKS</p>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-2">
+                            <li>Courses</li>
+                            <li>Privacy policy</li>
+                            <li>Refund policy</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <p class="text-xl font-bold">GET IN TOUCH</p>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-1">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>emailOne@gmail.com</p>
+                            </li>
+                            <li class="flex items-center gap-1">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>emailTwo@gmail.com</p>
+                            </li>
+                            <li class="flex items-center gap-1">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>emailThree@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <p class="text-xl font-bold">CONNECT WITH US</p>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-1">
+                                <p class="text-[#5834eb]">Facepook</p>
+                                <i class="fa-brands fa-square-facebook socialMedia-icon"></i>
+                            </li>
+                            <li class="flex items-center gap-1">
+                                <p class="text-[#5834eb]">Twitter</p>
+                                <i class="fa-brands fa-square-x-twitter socialMedia-icon"></i>
+                            </li>
+                            <li class="flex items-center gap-1">
+                                <p class="text-[#5834eb]">Instagram</p>
+                                <i class="fa-brands fa-square-instagram socialMedia-icon"></i>
+                            </li>
+                            <li class="flex items-center gap-1">
+                                <p class="text-[#5834eb]">Linkedin</p>
+                                <i class="fa-brands fa-linkedin socialMedia-icon"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="py-10 flex items-end justify-center mb-10">
+                <p>Copyright &copy; 2025</p>
+            </div>
+        </footer>
+    </div>
+    <script src="artical.js"></script>
+</body>
+
+</html>

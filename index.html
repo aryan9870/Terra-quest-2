@@ -86,14 +86,18 @@
 
    <div class="w-full px-5 sm:px-10">
   <!-- ===== MAIN TABS (UPSC vs UPPCS) ===== -->
-  <div class="flex justify-center mb-8 border-b border-gray-300">
-    <button class="tab_btn_main px-6 py-3 font-semibold text-gray-600 border-b-4 border-transparent active">
-      UPSC
-    </button>
-    <button class="tab_btn_main px-6 py-3 font-semibold text-gray-600 border-b-4 border-transparent">
-      UPPCS
-    </button>
-  </div>
+ <div class="flex justify-center mb-8 space-x-3">
+  <!-- Active Tab -->
+  <button class="tab_btn_main px-6 py-3 font-semibold rounded-t-lg bg-indigo-600 text-white shadow-lg">
+    UPSC
+  </button>
+
+  <!-- Inactive Tab -->
+  <button class="tab_btn_main px-6 py-3 font-semibold rounded-t-lg bg-gray-200 text-gray-700 hover:bg-gray-300">
+    UPPCS
+  </button>
+</div>
+
 
   <!-- ===== UPSC CONTENT ===== -->
   <div class="content_main active">

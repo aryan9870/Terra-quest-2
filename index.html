@@ -86,101 +86,138 @@
 
    <div class="w-full px-5 sm:px-10">
   <!-- Main Tabs (UPSC & UPPCS) -->
-  <div class="tab_box_main flex justify-center border-b-2 border-gray-200 relative">
-    <button class="tab_btn_1 text-lg px-6 py-3 font-semibold text-gray-600 active">UPSC</button>
-    <button class="tab_btn_2 text-lg px-6 py-3 font-semibold text-gray-600">UPPCS</button>
-    <div class="line_main absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Tabs Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <!-- ===== MAIN TABS (UPSC vs UPPCS) ===== -->
+  <div class="flex justify-center mb-8 border-b border-gray-300">
+    <button class="tab_btn_main px-6 py-3 font-semibold text-gray-600 border-b-4 border-transparent active">
+      UPSC
+    </button>
+    <button class="tab_btn_main px-6 py-3 font-semibold text-gray-600 border-b-4 border-transparent">
+      UPPCS
+    </button>
   </div>
 
-  <!-- ================= UPSC CONTENT ================= -->
-  <div class="content_main py-6">
-    <h1 class="text-2xl font-bold mb-5">Union Public Service Commission (UPSC)</h1>
+  <!-- ===== UPSC CONTENT ===== -->
+  <div class="content_main active">
+    <h2 class="text-2xl font-bold mb-5">Union Public Service Commission (UPSC)</h2>
 
-    <!-- Nested Tabs (Prelims, Mains, Interview) -->
-    <div class="tab_box flex justify-around border-b-2 border-gray-200 relative">
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600 active">Prelims</button>
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Mains</button>
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Interview</button>
-      <div class="line absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+    <!-- Nested Tabs -->
+    <div class="flex justify-center mb-6 border-b border-gray-300">
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent active">Prelims</button>
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent">Mains</button>
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent">Interview</button>
     </div>
 
-    <div class="content_box py-6">
-      <!-- Prelims -->
-      <div class="content">
-        <h2 class="mb-3 text-lg font-semibold">Notes & Mock Tests</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">UPSC Prelims Mock Test Series</a>
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">NCERT Based Notes</a>
-        </div>
-        <h2 class="mb-3 text-lg font-semibold">Books</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">Indian Polity – Laxmikant</a>
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">Modern History – Spectrum</a>
-        </div>
-      </div>
-
-      <!-- Mains -->
-      <div class="content hidden">
-        <h2 class="mb-3 text-lg font-semibold">Mains Preparation</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="#" class="p-4 border rounded-xl shadow">GS Paper I Mock Tests</a>
-          <a href="#" class="p-4 border rounded-xl shadow">Ethics Case Studies</a>
-        </div>
-      </div>
-
-      <!-- Interview -->
-      <div class="content hidden">
-        <h2 class="mb-3 text-lg font-semibold">Interview Preparation</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="#" class="p-4 border rounded-xl shadow">Mock Interview Sessions</a>
-          <a href="#" class="p-4 border rounded-xl shadow">Current Affairs Discussion</a>
-        </div>
+    <!-- Prelims -->
+    <div class="content active">
+      <h3 class="text-lg font-semibold mb-3">Prelims Notes & Mock Tests</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">UPSC Prelims Mock Test Series</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">NCERT Based Notes</div>
       </div>
     </div>
-  </div>
 
-  <!-- ================= UPPCS CONTENT ================= -->
-  <div class="content_main hidden py-6">
-    <h1 class="text-2xl font-bold mb-5">Uttar Pradesh Public Service Commission (UPPCS)</h1>
-
-    <!-- Nested Tabs (Prelims, Mains, Interview) -->
-    <div class="tab_box flex justify-around border-b-2 border-gray-200 relative">
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600 active">Prelims</button>
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Mains</button>
-      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Interview</button>
-      <div class="line absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+    <!-- Mains -->
+    <div class="content hidden">
+      <h3 class="text-lg font-semibold mb-3">Mains Preparation</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">GS Paper I Mock Tests</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">Ethics Case Studies</div>
+      </div>
     </div>
 
-    <div class="content_box py-6">
-      <!-- Prelims -->
-      <div class="content">
-        <h2 class="mb-3 text-lg font-semibold">Notes & Mock Tests</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow">UPPCS Prelims Test Series</a>
-          <a href="#" class="p-4 border rounded-xl shadow">NCERT Summary Notes</a>
-        </div>
-      </div>
-
-      <!-- Mains -->
-      <div class="content hidden">
-        <h2 class="mb-3 text-lg font-semibold">Mains Preparation</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="#" class="p-4 border rounded-xl shadow">Essay Writing Practice</a>
-          <a href="#" class="p-4 border rounded-xl shadow">GS Paper II Mock Tests</a>
-        </div>
-      </div>
-
-      <!-- Interview -->
-      <div class="content hidden">
-        <h2 class="mb-3 text-lg font-semibold">Interview Preparation</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="#" class="p-4 border rounded-xl shadow">Mock Interviews</a>
-          <a href="#" class="p-4 border rounded-xl shadow">UP Current Affairs Discussions</a>
-        </div>
+    <!-- Interview -->
+    <div class="content hidden">
+      <h3 class="text-lg font-semibold mb-3">Interview Preparation</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">Mock Interview Sessions</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">Current Affairs Discussion</div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- ===== UPPCS CONTENT ===== -->
+  <div class="content_main hidden">
+    <h2 class="text-2xl font-bold mb-5">Uttar Pradesh Public Service Commission (UPPCS)</h2>
+
+    <!-- Nested Tabs -->
+    <div class="flex justify-center mb-6 border-b border-gray-300">
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent active">Prelims</button>
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent">Mains</button>
+      <button class="tab_btn px-4 py-2 text-gray-600 font-medium border-b-4 border-transparent">Interview</button>
+    </div>
+
+    <!-- Prelims -->
+    <div class="content active">
+      <h3 class="text-lg font-semibold mb-3">Prelims Notes & Mock Tests</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">UPPCS Prelims Test Series</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">NCERT Summary Notes</div>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="content hidden">
+      <h3 class="text-lg font-semibold mb-3">Mains Preparation</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">Essay Writing Practice</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">GS Paper II Mock Tests</div>
+      </div>
+    </div>
+
+    <!-- Interview -->
+    <div class="content hidden">
+      <h3 class="text-lg font-semibold mb-3">Interview Preparation</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">Mock Interviews</div>
+        <div class="p-4 bg-white rounded-xl shadow hover:shadow-md">UP Current Affairs Discussions</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== MAIN TABS =====
+  const mainTabs = document.querySelectorAll(".tab_btn_main");
+  const mainContents = document.querySelectorAll(".content_main");
+
+  mainTabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
+      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
+      mainContents.forEach(c => c.classList.add("hidden"));
+      tab.classList.add("active", "text-indigo-600", "border-indigo-600");
+      mainContents[i].classList.remove("hidden");
+    });
+  });
+
+  // ===== NESTED TABS =====
+  document.querySelectorAll(".content_main").forEach((section) => {
+    const tabs = section.querySelectorAll(".tab_btn");
+    const contents = section.querySelectorAll(".content");
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
+        contents.forEach(c => c.classList.add("hidden"));
+        tab.classList.add("active", "text-indigo-600", "border-indigo-600");
+        contents[i].classList.remove("hidden");
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
 
 
     <div class=" flex flex-col justify-center items-center">
@@ -333,62 +370,7 @@
       </div>
     </footer>
   </div>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // ===== MAIN TABS (UPSC / UPPCS) =====
-  const mainTabs = document.querySelectorAll(".tab_btn_main");
-  const mainContents = document.querySelectorAll(".content_main");
-  const lineMain = document.querySelector(".line_main");
-
-  mainTabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      // Reset active state
-      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600"));
-      mainContents.forEach(c => c.classList.add("hidden"));
-
-      // Activate clicked tab
-      tab.classList.add("active", "text-indigo-600");
-      mainContents[index].classList.remove("hidden");
-
-      // Move line under active tab
-      lineMain.style.width = tab.offsetWidth + "px";
-      lineMain.style.left = tab.offsetLeft + "px";
-    });
-  });
-
-  // Initialize main line
-  if (mainTabs.length > 0) {
-    lineMain.style.width = mainTabs[0].offsetWidth + "px";
-    lineMain.style.left = mainTabs[0].offsetLeft + "px";
-  }
-
-  // ===== NESTED TABS (Prelims / Mains / Interview) =====
-  function initNestedTabs(wrapper) {
-    const tabs = wrapper.querySelectorAll(".tab_btn");
-    const contents = wrapper.parentElement.querySelectorAll(".content");
-    const line = wrapper.querySelector(".line");
-
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        // Reset
-        tabs.forEach(t => t.classList.remove("active", "text-indigo-600"));
-        contents.forEach(c => c.classList.add("hidden"));
-
-        // Activate
-        tab.classList.add("active", "text-indigo-600");
-        contents[index].classList.remove("hidden");
-
-        // Move line
-        line.style.width = tab.offsetWidth + "px";
-        line.style.left = tab.offsetLeft + "px";
-      });
-    });
-
-    // Init line
-    if (tabs.length > 0) {
-      line.style.width = tabs[0].offsetWidth + "px";
-      line.style.left = ta
-
+ 
   <script src="home.js"></script>
 </body>
 

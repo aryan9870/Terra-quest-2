@@ -348,12 +348,12 @@ document.addEventListener("DOMContentLoaded", () => {
   mainTabs.forEach((tab, i) => {
     tab.addEventListener("click", () => {
       mainTabs.forEach(t => {
-        t.classList.remove("bg-indigo-600", "text-white", "shadow-lg");
+        t.classList.remove("bg-[#5834eb]", "text-white", "shadow-lg");
         t.classList.add("bg-gray-200", "text-gray-700");
       });
       mainContents.forEach(c => c.classList.add("hidden"));
 
-      tab.classList.add("bg-indigo-600", "text-white", "shadow-lg");
+      tab.classList.add("bg-[#5834eb]", "text-white", "shadow-lg");
       tab.classList.remove("bg-gray-200", "text-gray-700");
 
       mainContents[i].classList.remove("hidden");

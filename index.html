@@ -339,6 +339,7 @@
     </footer>
   </div>
  <script>
+
 document.addEventListener("DOMContentLoaded", () => {
   // ===== MAIN TABS =====
   const mainTabs = document.querySelectorAll(".tab_btn_main");
@@ -346,25 +347,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainTabs.forEach((tab, i) => {
     tab.addEventListener("click", () => {
-      mainTabs.forEach(t => {
-        t.classList.remove("bg-[#5834eb]", "text-white");
-        t.classList.add("bg-gray-200", "text-gray-700");
-      });
-      tab.classList.add("bg-[#5834eb]", "text-white");
-      tab.classList.remove("bg-gray-200", "text-gray-700");
-
-      // Show content
-      if (i === 0) {
-        upsContent.classList.remove("hidden");
-        uppcsContent.classList.add("hidden");
-      } else {
-        upsContent.classList.add("hidden");
-        uppcsContent.classList.remove("hidden");
-      }
+      mainTabs.forEach(t => t.classList.remove("active", "text-[#5834eb]-600", "border-indigo-600"));
+      mainContents.forEach(c => c.classList.add("hidden"));
+      tab.classList.add("active", "text-[#5834eb]-600", "border-indigo-600");
+      mainContents[i].classList.remove("hidden");
     });
   });
 
-  // ===== NESTED TABS =====
    // ===== NESTED TABS =====
   document.querySelectorAll(".content_main").forEach((section) => {
     const tabs = section.querySelectorAll(".tab_btn");

@@ -347,28 +347,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainTabs.forEach((tab, i) => {
     tab.addEventListener("click", () => {
-      mainTabs.forEach(t => t.classList.remove("active", "text-[#5834eb]-600", "border-indigo-600"));
+      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
       mainContents.forEach(c => c.classList.add("hidden"));
-      tab.classList.add("active", "text-[#5834eb]-600", "border-indigo-600");
+      tab.classList.add("active", "text-indigo-600", "border-indigo-600");
       mainContents[i].classList.remove("hidden");
     });
   });
 
-   // ===== NESTED TABS =====
+  // ===== NESTED TABS =====
   document.querySelectorAll(".content_main").forEach((section) => {
     const tabs = section.querySelectorAll(".tab_btn");
     const contents = section.querySelectorAll(".content");
 
     tabs.forEach((tab, i) => {
       tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active", "text-[#5834eb]-600", "border-[#5834eb]-600"));
+        tabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
         contents.forEach(c => c.classList.add("hidden"));
-        tab.classList.add("active", "text-[#5834eb]-600", "border-[#5834eb]-600");
+        tab.classList.add("active", "text-indigo-600", "border-indigo-600");
         contents[i].classList.remove("hidden");
       });
     });
   });
-
 });
 
 </script>

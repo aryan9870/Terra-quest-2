@@ -284,111 +284,8 @@
     </div>
   </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // ===== MAIN TABS =====
-  const mainTabs = document.querySelectorAll(".tab_btn_main");
-  const mainContents = document.querySelectorAll(".content_main");
 
-  mainTabs.forEach((tab, i) => {
-    tab.addEventListener("click", () => {
-      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
-      mainContents.forEach(c => c.classList.add("hidden"));
-      tab.classList.add("active", "text-indigo-600", "border-indigo-600");
-      mainContents[i].classList.remove("hidden");
-    });
-  });
-
-  // ===== NESTED TABS =====
-  document.querySelectorAll(".content_main").forEach((section) => {
-    const tabs = section.querySelectorAll(".tab_btn");
-    const contents = section.querySelectorAll(".content");
-
-    tabs.forEach((tab, i) => {
-      tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
-        contents.forEach(c => c.classList.add("hidden"));
-        tab.classList.add("active", "text-indigo-600", "border-indigo-600");
-        contents[i].classList.remove("hidden");
-      });
-    });
-  });
-});
-</script>
-
-</body>
-</html>
-
-
-
-    <div class=" flex flex-col justify-center items-center">
-      <h3 class="font-bold text-xl">Our Popular Courses</h3>
-      <div class="result-cards flex flex-wrap gap-10 sm:justify-around justify-center my-10">
-        <div class="w-80 max-w-[90%] bg-white border border-gray-200 rounded-lg shadow-sm ">
-          <img class="p-5 h-60 w-full"
-            src="https://courses-assets-v2.classplus.co/_next/image?url=/api/proxyimage?url=https%3A%2F%2Fcdn-wl-assets.classplus.co%2Fproduction%2Fsingle%2Fklzujf%2Fbaae7126-7a31-4b4e-a97e-533b266bd24c.jpg&w=640&q=75"
-            alt="product image" />
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5 class="text-md font-semibold tracking-tight text-gray-900">Priyamvada Ashok Mhaddalkar
-              </h5>
-            </a>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">AIR 13 (UPSC CSE 2021)</span>
-            </div>
-            <div class="flex justify-end mt-2">
-              <button class="border py-2 px-5 rounded-md text-white font-semibold bg-[#5834eb]">Get this course</button>
-            </div>
-          </div>
-        </div>
-        <div class="w-80 max-w-[90%] bg-white border border-gray-200 rounded-lg shadow-sm ">
-          <img class="p-5 h-60 w-full"
-            src="https://courses-assets-v2.classplus.co/_next/image?url=/api/proxyimage?url=https%3A%2F%2Fcdn-wl-assets.classplus.co%2Fproduction%2Fsingle%2Fklzujf%2F6b8b04da-f807-4233-9997-404ada028005.jpg&w=640&q=75"
-            alt="product image" />
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5 class="text-md font-semibold tracking-tight text-gray-900">Priyamvada Ashok Mhaddalkar
-              </h5>
-            </a>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">AIR 13 (UPSC CSE 2021)</span>
-            </div>
-            <div class="flex justify-end mt-2">
-              <button class="border py-2 px-5 rounded-md text-white font-semibold bg-[#5834eb]">Get this course</button>
-            </div>
-          </div>
-        </div>
-        <div class="w-80 max-w-[90%] bg-white border border-gray-200 rounded-lg shadow-sm ">
-          <img class="p-5 h-60 w-full"
-            src="https://courses-assets-v2.classplus.co/_next/image?url=/api/proxyimage?url=https%3A%2F%2Fcdn-wl-assets.classplus.co%2Fproduction%2Fsingle%2Fklzujf%2F234c5922-2776-46d1-b23f-03a9992612f3.jpg&w=640&q=75"
-            alt="product image" />
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5 class="text-md font-semibold tracking-tight text-gray-900">Priyamvada Ashok Mhaddalkar
-              </h5>
-            </a>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">AIR 13 (UPSC CSE 2021)</span>
-            </div>
-            <div class="flex justify-end mt-2">
-              <button class="border py-2 px-5 rounded-md text-white font-semibold bg-[#5834eb]">Get this course</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div>
-        <div class="py-10 flex items-end justify-center">
-          <a href=""
-            class="font-bold text-md bg-[#5834eb] text-white px-5 py-2 rounded-lg flex items-center justify-center gap-1">
-            <p>See more</p>
-            <i class="fa-solid fa-angles-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="mb-20 flex flex-col justify-center items-center">
+<div class="mb-20 flex flex-col justify-center items-center">
       <h3 class="font-bold text-xl text-center">ON A MISSION TO TEACH MILLIONS</h3>
       <img class="h-[500px] mx-auto my-10 md:flex hidden" src="/accets/image.png" alt="">
       <img class="md:hidden my-10 px-5" src="https://www.vidyalankar.org/iitjee/assets/img/result/advanced/2023.jpg"
@@ -471,7 +368,38 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </footer>
   </div>
- 
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== MAIN TABS =====
+  const mainTabs = document.querySelectorAll(".tab_btn_main");
+  const mainContents = document.querySelectorAll(".content_main");
+
+  mainTabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
+      mainTabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
+      mainContents.forEach(c => c.classList.add("hidden"));
+      tab.classList.add("active", "text-indigo-600", "border-indigo-600");
+      mainContents[i].classList.remove("hidden");
+    });
+  });
+
+  // ===== NESTED TABS =====
+  document.querySelectorAll(".content_main").forEach((section) => {
+    const tabs = section.querySelectorAll(".tab_btn");
+    const contents = section.querySelectorAll(".content");
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
+        contents.forEach(c => c.classList.add("hidden"));
+        tab.classList.add("active", "text-indigo-600", "border-indigo-600");
+        contents[i].classList.remove("hidden");
+      });
+    });
+  });
+});
+</script>
+
   <script src="home.js"></script>
 </body>
 

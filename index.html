@@ -84,134 +84,94 @@
       </div>
     </div>
 
-   <!-- ================= UPSC ================= -->
-<div class="flex flex-col gap-5 sm:px-10 px-3">
-  <h1 class="md:text-3xl text-center md:text-start text-xl mb-5 font-bold">
-    Union Public Service Commission (UPSC)
-  </h1>
-  <div class="container shadow-2xl rounded-2xl lg:p-10 p-5 w-full mb-20 bg-white">
-    
-    <!-- Nested Tabs -->
-    <div class="tab_box flex justify-around items-center border-b-2 border-gray-200 relative">
-      <button class="tab_btn_1 text-lg p-4 font-semibold text-gray-600 active">Prelims</button>
-      <button class="tab_btn_1 text-lg p-4 font-semibold text-gray-600">Mains</button>
-      <button class="tab_btn_1 text-lg p-4 font-semibold text-gray-600">Interview</button>
-      <div class="line_1 absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+   <div class="w-full px-5 sm:px-10">
+  <!-- Main Tabs (UPSC & UPPCS) -->
+  <div class="tab_box_main flex justify-center border-b-2 border-gray-200 relative">
+    <button class="tab_btn_main text-lg px-6 py-3 font-semibold text-gray-600 active">UPSC</button>
+    <button class="tab_btn_main text-lg px-6 py-3 font-semibold text-gray-600">UPPCS</button>
+    <div class="line_main absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+  </div>
+
+  <!-- ================= UPSC CONTENT ================= -->
+  <div class="content_main py-6">
+    <h1 class="text-2xl font-bold mb-5">Union Public Service Commission (UPSC)</h1>
+
+    <!-- Nested Tabs (Prelims, Mains, Interview) -->
+    <div class="tab_box flex justify-around border-b-2 border-gray-200 relative">
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600 active">Prelims</button>
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Mains</button>
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Interview</button>
+      <div class="line absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
     </div>
 
-    <!-- Tab Content -->
     <div class="content_box py-6">
       <!-- Prelims -->
-      <div class="content_1">
+      <div class="content">
         <h2 class="mb-3 text-lg font-semibold">Notes & Mock Tests</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md transition">
-            <h5 class="font-bold mb-2">UPSC Prelims Mock Test Series</h5>
-            <p class="text-sm text-gray-600">Practice with curated test series for GS Paper I & II.</p>
-          </a>
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md transition">
-            <h5 class="font-bold mb-2">NCERT Based Notes</h5>
-            <p class="text-sm text-gray-600">Crisp notes covering all NCERT subjects for UPSC.</p>
-          </a>
+          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">UPSC Prelims Mock Test Series</a>
+          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">NCERT Based Notes</a>
         </div>
-
-        <h2 class="mb-3 text-lg font-semibold">Recommended Books</h2>
+        <h2 class="mb-3 text-lg font-semibold">Books</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md transition">
-            <h5 class="font-bold mb-2">Indian Polity – Laxmikant</h5>
-            <p class="text-sm text-gray-600">Must-read for Polity and Governance section.</p>
-          </a>
-          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md transition">
-            <h5 class="font-bold mb-2">Modern History – Spectrum</h5>
-            <p class="text-sm text-gray-600">Covers Indian Freedom Struggle comprehensively.</p>
-          </a>
-        </div>
-
-        <h2 class="mb-3 text-lg font-semibold">Video Resources</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="p-4 border rounded-xl shadow">
-            <i class="fa-solid fa-circle-play text-3xl text-indigo-600 mb-2"></i>
-            <h5 class="font-bold mb-2">Prelims Strategy Session</h5>
-            <p class="text-sm text-gray-600">Learn effective strategies for UPSC Prelims preparation.</p>
-            <a href="#" class="text-indigo-600 text-sm font-medium hover:underline">Watch Now →</a>
-          </div>
-          <div class="p-4 border rounded-xl shadow">
-            <i class="fa-solid fa-circle-play text-3xl text-indigo-600 mb-2"></i>
-            <h5 class="font-bold mb-2">CSAT Problem Solving</h5>
-            <p class="text-sm text-gray-600">Step-by-step guidance on aptitude & reasoning.</p>
-            <a href="#" class="text-indigo-600 text-sm font-medium hover:underline">Watch Now →</a>
-          </div>
+          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">Indian Polity – Laxmikant</a>
+          <a href="#" class="p-4 border rounded-xl shadow hover:shadow-md">Modern History – Spectrum</a>
         </div>
       </div>
 
       <!-- Mains -->
-      <div class="content_1 hidden">
-        <h2 class="mb-3 text-lg font-semibold">Notes & Mock Tests</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+      <div class="content hidden">
+        <h2 class="mb-3 text-lg font-semibold">Mains Preparation</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" class="p-4 border rounded-xl shadow">GS Paper I Mock Tests</a>
           <a href="#" class="p-4 border rounded-xl shadow">Ethics Case Studies</a>
-        </div>
-        <h2 class="mb-3 text-lg font-semibold">Books</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow">India’s Struggle for Independence – Bipan Chandra</a>
-          <a href="#" class="p-4 border rounded-xl shadow">Ethics, Integrity & Aptitude – Subba Rao</a>
         </div>
       </div>
 
       <!-- Interview -->
-      <div class="content_1 hidden">
+      <div class="content hidden">
         <h2 class="mb-3 text-lg font-semibold">Interview Preparation</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" class="p-4 border rounded-xl shadow">Mock Interview Sessions</a>
-          <a href="#" class="p-4 border rounded-xl shadow">Current Affairs Discussion Videos</a>
+          <a href="#" class="p-4 border rounded-xl shadow">Current Affairs Discussion</a>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ================= UPPCS ================= -->
-<div class="flex flex-col gap-5 sm:px-10 px-3">
-  <h1 class="md:text-3xl text-center md:text-start text-xl mb-5 font-bold">
-    Uttar Pradesh Public Service Commission (UPPCS)
-  </h1>
-  <div class="container shadow-2xl rounded-2xl lg:p-10 p-5 w-full mb-20 bg-white">
-    
-    <!-- Nested Tabs -->
-    <div class="tab_box flex justify-around items-center border-b-2 border-gray-200 relative">
-      <button class="tab_btn_2 text-lg p-4 font-semibold text-gray-600 active">Prelims</button>
-      <button class="tab_btn_2 text-lg p-4 font-semibold text-gray-600">Mains</button>
-      <button class="tab_btn_2 text-lg p-4 font-semibold text-gray-600">Interview</button>
-      <div class="line_2 absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
+  <!-- ================= UPPCS CONTENT ================= -->
+  <div class="content_main hidden py-6">
+    <h1 class="text-2xl font-bold mb-5">Uttar Pradesh Public Service Commission (UPPCS)</h1>
+
+    <!-- Nested Tabs (Prelims, Mains, Interview) -->
+    <div class="tab_box flex justify-around border-b-2 border-gray-200 relative">
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600 active">Prelims</button>
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Mains</button>
+      <button class="tab_btn text-md px-4 py-2 font-semibold text-gray-600">Interview</button>
+      <div class="line absolute bg-indigo-600 rounded-xl h-1 bottom-0 transition-all duration-300"></div>
     </div>
 
-    <!-- Tab Content -->
     <div class="content_box py-6">
       <!-- Prelims -->
-      <div class="content_2">
+      <div class="content">
         <h2 class="mb-3 text-lg font-semibold">Notes & Mock Tests</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
           <a href="#" class="p-4 border rounded-xl shadow">UPPCS Prelims Test Series</a>
           <a href="#" class="p-4 border rounded-xl shadow">NCERT Summary Notes</a>
         </div>
-        <h2 class="mb-3 text-lg font-semibold">Books</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow">Indian Geography – Majid Hussain</a>
-          <a href="#" class="p-4 border rounded-xl shadow">UP Special GK</a>
-        </div>
       </div>
 
       <!-- Mains -->
-      <div class="content_2 hidden">
-        <h2 class="mb-3 text-lg font-semibold">Mock Tests</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-          <a href="#" class="p-4 border rounded-xl shadow">GS Paper II Mock Tests</a>
+      <div class="content hidden">
+        <h2 class="mb-3 text-lg font-semibold">Mains Preparation</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" class="p-4 border rounded-xl shadow">Essay Writing Practice</a>
+          <a href="#" class="p-4 border rounded-xl shadow">GS Paper II Mock Tests</a>
         </div>
       </div>
 
       <!-- Interview -->
-      <div class="content_2 hidden">
+      <div class="content hidden">
         <h2 class="mb-3 text-lg font-semibold">Interview Preparation</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="#" class="p-4 border rounded-xl shadow">Mock Interviews</a>

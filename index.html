@@ -88,7 +88,7 @@
   <!-- ===== MAIN TABS (UPSC vs UPPCS) ===== -->
  <!-- ===== MAIN TABS ===== -->
   <div class="flex w-full mb-6 rounded-lg overflow-hidden shadow-lg">
-    <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-indigo-600 text-white">
+    <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-[#5834eb] text-white">
       UPSC
     </div>
     <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-gray-200 text-gray-700 hover:bg-gray-300">
@@ -368,9 +368,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabs.forEach((tab, i) => {
       tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active", "text-indigo-600", "border-indigo-600"));
+        tabs.forEach(t => t.classList.remove("active", "text-[#5834eb]-600", "border-[#5834eb]-600"));
         contents.forEach(c => c.classList.add("hidden"));
-        tab.classList.add("active", "text-indigo-600", "border-indigo-600");
+        tab.classList.add("active", "text-[#5834eb]-600", "border-[#5834eb]-600");
         contents[i].classList.remove("hidden");
       });
     });

@@ -485,9 +485,12 @@ Thank you so much sir 🙏
     </div>
 
     <!-- Optional: Scroll Hint -->
-    <p class="text-gray-500 text-sm mt-4 text-center">
-      Swipe/scroll right to see more reviews →
-    </p>
+       <div class="flex justify-center mt-6 space-x-2">
+      <button class="w-3 h-3 bg-gray-400 rounded-full" onclick="scrollToSlide(0)"></button>
+      <button class="w-3 h-3 bg-gray-400 rounded-full" onclick="scrollToSlide(1)"></button>
+      <button class="w-3 h-3 bg-gray-400 rounded-full" onclick="scrollToSlide(2)"></button>
+      <button class="w-3 h-3 bg-gray-400 rounded-full" onclick="scrollToSlide(3)"></button>
+    </div>
   </div>
 </section>
       <footer class="md:px-0 px-5">
@@ -605,7 +608,11 @@ Thank you so much sir 🙏
         });
       });
 
-
+  const carousel = document.getElementById('carousel');
+  function scrollToSlide(index) {
+    const cardWidth = carousel.children[0].offsetWidth + 24; // width + gap
+    carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
+  }
     </script>
 
     <script src="home.js"></script>

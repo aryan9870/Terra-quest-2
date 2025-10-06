@@ -562,23 +562,37 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         // ===== MAIN TABS =====
-        const mainTabs = document.querySelectorAll(".tab_btn_main");
-        const mainContents = document.querySelectorAll(".content_main");
+        // ===== MAIN TABS =====
+const mainTabs = document.querySelectorAll(".tab_btn_main");
+const mainContents = document.querySelectorAll(".content_main");
 
-        mainTabs.forEach((tab, i) => {
-          tab.addEventListener("click", () => {
-            mainTabs.forEach(t => {
-              t.classList.remove("bg-orange-400", "text-white", "shadow-lg");
-              t.classList.add("bg-gray-200", "text-black");
-            });
-            mainContents.forEach(c => c.classList.add("hidden"));
+mainTabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+    // Reset all tabs
+    mainTabs.forEach(t => {
+      t.classList.remove(
+        "bg-orange-400", "text-white", "shadow-md", "hover:shadow-lg", "hover:bg-orange-500"
+      );
+      t.classList.add(
+        "bg-white", "text-gray-700", "hover:text-orange-400", "hover:bg-gray-50"
+      );
+    });
 
-            tab.classList.add("bg-orange-400", "text-white", "shadow-lg");
-            tab.classList.remove("bg-gray-200", "text-black");
+    // Hide all content sections
+    mainContents.forEach(c => c.classList.add("hidden"));
 
-            mainContents[i].classList.remove("hidden");
-          });
-        });
+    // Activate clicked tab
+    tab.classList.add(
+      "bg-orange-400", "text-white", "shadow-md", "hover:shadow-lg", "hover:bg-orange-500"
+    );
+    tab.classList.remove(
+      "bg-white", "text-gray-700", "hover:text-orange-400", "hover:bg-gray-50"
+    );
+
+    // Show corresponding content
+    mainContents[i].classList.remove("hidden");
+  });
+});
 
         // ===== NESTED TABS =====
         document.querySelectorAll(".content_main").forEach((section) => {

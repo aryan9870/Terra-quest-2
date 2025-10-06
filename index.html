@@ -91,25 +91,11 @@
       <h3 class="text-2xl font-bold mb-8 text-gray-800 text-center">Explore Learning Resources</h3>
 
       <!-- ===== MAIN TABS ===== -->
-   <div class="tab_btn_main flex w-full mb-6 bg-gray-100 rounded-full p-1 shadow-inner">
-  <!-- Active Tab -->
-  <button
-    class="tab_btn_main flex-1 py-3 rounded-full font-semibold text-white bg-orange-400 shadow-md hover:shadow-lg hover:bg-orange-500 transition-all duration-300">
-    UPSC
-  </button>
-
-  <!-- Inactive Tab -->
-  <button
-    class="flex-1 py-3 rounded-full font-semibold text-gray-700 bg-white hover:text-orange-500 hover:bg-gray-50 transition-all duration-300">
-    UPPCS
-  </button>
-</div>
-
-
-
-
-
-
+      <div class="flex w-full mb-6 rounded-lg overflow-hidden shadow-lg"> 
+        <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-orange-400 text-white"> UPSC </div> 
+        <div class="tab_btn_main flex-1 text-center py-4 font-semibold cursor-pointer bg-gray-200 text-black"> UPPCS </div>
+      </div>
+ 
       <!-- ===== UPSC CONTENT ===== -->
       <div class="content_main active">
 
@@ -562,53 +548,24 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         // ===== MAIN TABS =====
- const mainTabs = Array.from(document.querySelectorAll('.tab_btn_main'));
-  const mainContents = Array.from(document.querySelectorAll('.content_main'));
+        const mainTabs = document.querySelectorAll(".tab_btn_main");
+        const mainContents = document.querySelectorAll(".content_main");
 
-  if (!mainTabs.length || !mainContents.length) return;
+        mainTabs.forEach((tab, i) => {
+          tab.addEventListener("click", () => {
+            mainTabs.forEach(t => {
+              t.classList.remove("bg-orange-400", "text-white", "shadow-lg");
+              t.classList.add("bg-gray-200", "text-black");
+            });
+            mainContents.forEach(c => c.classList.add("hidden"));
 
-  // Helper to activate a tab by index
-  function setActive(index) {
-    mainTabs.forEach((t, i) => {
-      if (i === index) {
-        // active classes (do NOT toggle hover: classes here)
-        t.classList.add('bg-orange-500', 'text-white', 'shadow-md');
-        t.classList.remove('bg-white', 'text-gray-700');
-        t.setAttribute('aria-pressed', 'true');
-      } else {
-        // inactive classes
-        t.classList.remove('bg-orange-500', 'text-white', 'shadow-md');
-        t.classList.add('bg-white', 'text-gray-700');
-        t.setAttribute('aria-pressed', 'false');
-      }
-    });
+            tab.classList.add("bg-orange-400", "text-white", "shadow-lg");
+            tab.classList.remove("bg-gray-200", "text-black");
 
-    mainContents.forEach((c, i) => {
-      if (i === index) {
-        c.classList.remove('hidden', 'opacity-0');
-        c.classList.add('opacity-100', 'transition-opacity', 'duration-300');
-      } else {
-        c.classList.add('hidden', 'opacity-0');
-        c.classList.remove('opacity-100');
-      }
-    });
-  }
+            mainContents[i].classList.remove("hidden");
+          });
+        });
 
-  // Attach handlers
-  mainTabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => setActive(i));
-
-    // keyboard support: Enter or Space
-    tab.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        setActive(i);
-      }
-    });
-  });
-
-  // initialize first tab active (or choose another index)
-  setActive(0);
 
         // ===== NESTED TABS =====
         document.querySelectorAll(".content_main").forEach((section) => {

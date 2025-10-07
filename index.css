@@ -35,3 +35,14 @@
     transition: all 0.25s ease-in-out;
 }
 
+
+#accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+
+#accordion label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+}

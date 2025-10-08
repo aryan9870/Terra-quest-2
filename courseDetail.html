@@ -65,63 +65,72 @@
                     src="https://sunyaias-resources.s3.ap-south-1.amazonaws.com/content/ae766980-1db4-11f0-9f6f-bbcc9377b529.jpeg"
                     alt="">
 
-                <div class="max-w-4xl mx-auto mt-8">
-  <!-- Tabs Header -->
-  <div class="flex bg-gray-100 rounded-full p-1">
-    <div
-      class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300"
-      [ngClass]="selectedTab === 'overview' ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white' : 'text-gray-600'"
-      (click)="selectedTab = 'overview'"
-    >
-      Overview
-    </div>
-
-    <div
-      class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300"
-      [ngClass]="selectedTab === 'content' ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white' : 'text-gray-600'"
-      (click)="selectedTab = 'content'"
-    >
-      Content
-    </div>
-  </div>
-
-  <!-- Tabs Content -->
-  <div class="mt-6 bg-white rounded-xl shadow p-6">
-    <!-- Overview Tab -->
-    <div *ngIf="selectedTab === 'overview'">
-      <h2 class="text-2xl font-bold mb-4">{{ course.title }}</h2>
-      <p class="text-gray-700 mb-2">{{ course.description }}</p>
-
-      <div class="grid sm:grid-cols-2 gap-4 mt-4">
-        <p><strong>Duration:</strong> {{ course.duration }}</p>
-        <p><strong>Instructor:</strong> {{ course.instructor }}</p>
-        <p><strong>Start Date:</strong> {{ course.startDate }}</p>
-        <p><strong>Fee:</strong> {{ course.fee }}</p>
-      </div>
-    </div>
-
-    <!-- Content Tab -->
-    <div *ngIf="selectedTab === 'content'">
-      <h2 class="text-2xl font-bold mb-4">Course Content</h2>
-
-      <div *ngFor="let item of courseContent" class="p-4 border-b last:border-none">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="font-semibold">{{ item.title }}</p>
-            <p class="text-gray-500 text-sm">{{ item.type }}</p>
-          </div>
-          <button
-            class="text-sm bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600"
-            (click)="openContent(item)"
-          >
-            View
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+                 <div class="max-w-4xl w-full bg-white shadow-lg rounded-xl p-6">
+                    <!-- Tabs Header -->
+                    <div class="flex bg-gray-100 rounded-full p-1">
+                      <div id="tab-overview"
+                        class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white">
+                        Overview
+                      </div>
+                      <div id="tab-content"
+                        class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300 text-gray-600">
+                        Content
+                      </div>
+                    </div>
+                
+                    <!-- Tabs Content -->
+                    <div class="mt-6">
+                      <!-- Overview Section -->
+                      <div id="overview-section">
+                        <h2 class="text-2xl font-bold mb-4">Current Mania (Under AYUT)</h2>
+                        <p class="text-gray-700 mb-4">
+                          A complete test prep course covering 3000 MCQs with detailed explanations and practice modules.
+                        </p>
+                
+                        <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+                          <p><strong>Duration:</strong> 8 Months</p>
+                          <p><strong>Instructor:</strong> Dr. A. Sharma</p>
+                          <p><strong>Start Date:</strong> Nov 24, 2025</p>
+                          <p><strong>Fee:</strong> ₹4999</p>
+                        </div>
+                      </div>
+                
+                      <!-- Content Section -->
+                      <div id="content-section" class="hidden">
+                        <h2 class="text-2xl font-bold mb-4">Course Content</h2>
+                        <div class="divide-y">
+                          <div class="flex justify-between items-center py-3">
+                            <div>
+                              <p class="font-semibold">Introduction Video</p>
+                              <p class="text-sm text-gray-500">Video</p>
+                            </div>
+                            <button class="text-sm bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600">
+                              View
+                            </button>
+                          </div>
+                          <div class="flex justify-between items-center py-3">
+                            <div>
+                              <p class="font-semibold">MCQ Practice PDF 1</p>
+                              <p class="text-sm text-gray-500">PDF</p>
+                            </div>
+                            <button class="text-sm bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600">
+                              View
+                            </button>
+                          </div>
+                          <div class="flex justify-between items-center py-3">
+                            <div>
+                              <p class="font-semibold">Lecture 1 - Basics</p>
+                              <p class="text-sm text-gray-500">Video</p>
+                            </div>
+                            <button class="text-sm bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600">
+                              View
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
                 <div class="content text-center">
                     <div class="subtitle md:text-2xl text-lg  font-semibold">CSAT Foundation Course - 2026</div>
                     <div class="tagLine font-semibold md:text-md text-sm">[ONLY CSAT COURSE you need to tackle your CSAT
@@ -857,6 +866,34 @@
         </footer>
 
     </div>
+    <script>
+    const tabOverview = document.getElementById('tab-overview');
+    const tabContent = document.getElementById('tab-content');
+    const overviewSection = document.getElementById('overview-section');
+    const contentSection = document.getElementById('content-section');
+
+    tabOverview.addEventListener('click', () => {
+      // Highlight tab
+      tabOverview.classList.add('bg-gradient-to-r', 'from-purple-600', 'via-pink-500', 'to-orange-400', 'text-white');
+      tabContent.classList.remove('bg-gradient-to-r', 'from-purple-600', 'via-pink-500', 'to-orange-400', 'text-white');
+      tabContent.classList.add('text-gray-600');
+
+      // Toggle sections
+      overviewSection.classList.remove('hidden');
+      contentSection.classList.add('hidden');
+    });
+
+    tabContent.addEventListener('click', () => {
+      // Highlight tab
+      tabContent.classList.add('bg-gradient-to-r', 'from-purple-600', 'via-pink-500', 'to-orange-400', 'text-white');
+      tabOverview.classList.remove('bg-gradient-to-r', 'from-purple-600', 'via-pink-500', 'to-orange-400', 'text-white');
+      tabOverview.classList.add('text-gray-600');
+
+      // Toggle sections
+      contentSection.classList.remove('hidden');
+      overviewSection.classList.add('hidden');
+    });
+  </script>
 </body>
 
 </html>

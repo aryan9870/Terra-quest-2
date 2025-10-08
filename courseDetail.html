@@ -59,11 +59,69 @@
     
         </div>
         <div class="mt-28 flex items-center justify-center flex-col gap-2">
-            <h1 class="md:text-3xl text-xl text-center font-semibold">CSAT Course - 2026 - by IITians - 10 October</h1>
+            <h3 class="md:text-3xl text-xl text-center font-semibold">CSAT Course - 2026 - by IITians - 10 October</h3>
             <div class="image shadow-2xl mb-20 shadow-gray-500 md:p-10 p-5 w-11/12 rounded-xl">
                 <img class="w-full lg:max-h-96 sm:max-h-72 max-h-40"
                     src="https://sunyaias-resources.s3.ap-south-1.amazonaws.com/content/ae766980-1db4-11f0-9f6f-bbcc9377b529.jpeg"
                     alt="">
+
+                <div class="max-w-4xl mx-auto mt-8">
+  <!-- Tabs Header -->
+  <div class="flex bg-gray-100 rounded-full p-1">
+    <div
+      class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300"
+      [ngClass]="selectedTab === 'overview' ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white' : 'text-gray-600'"
+      (click)="selectedTab = 'overview'"
+    >
+      Overview
+    </div>
+
+    <div
+      class="flex-1 text-center py-2 font-semibold cursor-pointer rounded-full transition-all duration-300"
+      [ngClass]="selectedTab === 'content' ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white' : 'text-gray-600'"
+      (click)="selectedTab = 'content'"
+    >
+      Content
+    </div>
+  </div>
+
+  <!-- Tabs Content -->
+  <div class="mt-6 bg-white rounded-xl shadow p-6">
+    <!-- Overview Tab -->
+    <div *ngIf="selectedTab === 'overview'">
+      <h2 class="text-2xl font-bold mb-4">{{ course.title }}</h2>
+      <p class="text-gray-700 mb-2">{{ course.description }}</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mt-4">
+        <p><strong>Duration:</strong> {{ course.duration }}</p>
+        <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+        <p><strong>Start Date:</strong> {{ course.startDate }}</p>
+        <p><strong>Fee:</strong> {{ course.fee }}</p>
+      </div>
+    </div>
+
+    <!-- Content Tab -->
+    <div *ngIf="selectedTab === 'content'">
+      <h2 class="text-2xl font-bold mb-4">Course Content</h2>
+
+      <div *ngFor="let item of courseContent" class="p-4 border-b last:border-none">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-semibold">{{ item.title }}</p>
+            <p class="text-gray-500 text-sm">{{ item.type }}</p>
+          </div>
+          <button
+            class="text-sm bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600"
+            (click)="openContent(item)"
+          >
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
                 <div class="content text-center">
                     <div class="subtitle md:text-2xl text-lg  font-semibold">CSAT Foundation Course - 2026</div>
                     <div class="tagLine font-semibold md:text-md text-sm">[ONLY CSAT COURSE you need to tackle your CSAT
@@ -72,6 +130,7 @@
                             October</span>
                     </div>
                 </div>
+                 <h3 class="text-[#5834eb] text-xl font-semibold">Overview</h3>
                 <div class="objective">
                     <p><b>Objective:</b> CSAT although a qualifying paper have become a major roadblock for the students
                         in
